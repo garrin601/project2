@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>The HTML5 Herald</title>
+    <title>Final Project</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 
@@ -17,15 +17,8 @@
 
 <body>
 
-
-<h1>
-    <?php
-
-    //this how to print some data;
-    echo $data['site_name'];
-
-    ?> </h1>
-
+ </h1>
+<h1 class="header">Welcome, please dont break it</h1>
 <h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>
 <h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>
 
