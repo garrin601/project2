@@ -36,7 +36,16 @@
 
 
 </form>
-<h1><a href="index.php?page=accounts&action=register">Register</a></h1>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<p class="links"> Dont have account? Please click here: <a href="index.php?page=accounts&action=register">Register</a></p>
+
+
 
 
 <script src="js/scripts.js"></script>
