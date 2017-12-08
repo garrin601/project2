@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kwilliams
- * Date: 11/27/17
- * Time: 5:32 PM
- */
+
 
 
 //each page extends controller and the index.php?page=tasks causes the controller to be called
@@ -84,8 +79,17 @@ class tasksController extends http\controller
     {
         $record = todos::findOne($_REQUEST['id']);
         $record->delete();
-        print_r($_POST);
+     
+	echo "you have successfully delete record number:", ($_REQUEST['id']);	
 
-    }
 
+
+
+
+
+   
+
+
+
+}
 }
