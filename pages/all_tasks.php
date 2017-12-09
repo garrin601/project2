@@ -1,11 +1,18 @@
 <!doctype html>
 
+
+
+
+<?php include('header.php'); ?>
+
+
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
 
     <title>The HTML5 Herald</title>
-    <meta name="description" content="The HTML5 Herald">
+    <meta name="description" content="Tasks Page">
     <meta name="author" content="SitePoint">
 
     <link rel="stylesheet" href="css/styles.css?v=1.0">
@@ -17,13 +24,37 @@
 
 <body>
 
-<?php
-//this is how you print something
-
-print utility\htmlTable::genarateTableFromMultiArray($data);
 
 
-?>
+
+
+
+ <section class="container" id="alltasks">
+  <div class="row">
+ <div class="col-sm-12">
+
+<h1>My Tasks</h1>
+
+<h2> Tasks are below, please feel free to edit update or change </h2>
+
+
+
+<p> <?php print utility\htmlTable::genarateTableFromMultiArray($data); ?></p>
+
+
+</div>	
+</div>
+<div class="row">
+<div class="col-sm-2">
+<a href="index.php?page=create&action=add_task"><button class="edit">Create Tasks Here</button></a>
+</div>
+
+
+<div class="col-sm-10"></div>
+</div>
+</section>
+
+
 
 
 <script src="js/scripts.js"></script>

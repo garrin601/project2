@@ -145,6 +145,8 @@ class routes
         $route->controller = 'accountsController';
         $route->method = 'store';
         $routes[] = $route;
+	
+	
 	// Route for task page
 
 	 $route = new route();

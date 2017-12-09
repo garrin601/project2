@@ -37,6 +37,18 @@ class tasksController extends http\controller
 
     //you should check the notes on the project posted in moodle for how to use active record here
 
+
+   public static function add_task ()
+
+   {
+
+   	self::getTemplate('create');
+    }
+
+
+
+
+
     public static function create()
     {
         print_r($_POST);
