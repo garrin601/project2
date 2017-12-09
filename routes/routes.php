@@ -145,7 +145,15 @@ class routes
         $route->controller = 'accountsController';
         $route->method = 'store';
         $routes[] = $route;
+	// Route for task page
 
+	 $route = new route();
+	 $route->http_method = 'GET';
+	 $route->action = 'add_task';
+ 	 $route->page = 'create';
+	 $route->controller = 'tasksController';
+	 $route->method = 'add_task';
+	 $routes[] = $route;
 
         return $routes;
     }
