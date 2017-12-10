@@ -39,6 +39,8 @@ class tasksController extends http\controller
 
 // function that sends data to create template for add_task
 
+// Function for adding tasks where forwards to the create.php page
+
 
    public static function add_task ()
 
@@ -46,6 +48,10 @@ class tasksController extends http\controller
 
    	self::getTemplate('create');
     }
+
+
+
+    
 
    public static function insert ()
 
@@ -96,7 +102,7 @@ header("Location: index.php?page=tasks&action=all");
        $record->complete = $_POST['complete'];
        $record->save();
 
-header("Location: index.php?page=tasks&action=show=". $_REQUEST['id']);
+header("Location: index.php?page=tasks&action=show=".$_REQUEST['id']);
 
     }
 

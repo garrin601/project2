@@ -22,10 +22,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
 
-<h1><a href="index.php?page=tasks&action=all">Return back to All Tasks</a></h1>
+<h1><a href="index.php?page=tasks&action=all">Return Back to All Tasks</a></h1>
 <p> <?php print utility\htmlTable::generateTableFromOneRecord($data); ?></p>
 
-<a href="index.php?page=edit_task&action=edit&id=<?php echo $data->id; ?> "><button class="edit">Edit This Task</button></a><br>
+<a href="index.php?page=edit_task&action=edit&id=<?php echo $data->id; ?> "><button class="edit">Edit This To Do</button></a>
 
 <form action="index.php?page=deleted&action=delete&id=<?php echo $data->id; ?> " method="post"id="form1">
 <button type="submit" form="form1" value="delete"class="delete">Delete This Task</button>

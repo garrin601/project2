@@ -157,7 +157,7 @@ class routes
 	 $route->method = 'add_task';
 	 $routes[] = $route;
 
-        return $routes;
+        
 	
 	// Route for inserting a new task on create page
 
@@ -179,6 +179,18 @@ class routes
 	$route->method = 'edit';
 	$routes[] = $route;
 
+
+
+	
+
+
+
+
+
+
+
+
+	return $routes;
 
 
 
