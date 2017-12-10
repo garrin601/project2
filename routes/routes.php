@@ -187,7 +187,15 @@ class routes
 	$route->method = 'display';
 	$routes[] = $route;
 	
+	// add route for log out
 
+	$route = new route();
+	$route->http_method = 'GET';
+	$route->action = 'logout';
+	$route->page = 'accounts';
+	$route->controlle r= 'accountsController';
+	$route->method = 'logout';
+	$routes[] = $route;
 
 
 
