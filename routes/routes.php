@@ -169,7 +169,15 @@ class routes
 	$route->method = 'insert';
 	$routes[] = $route;
 
+	// Adding a route for editing tasks from page=tasks&action=show
 
+	$route = new route();
+	$route->http_method = 'GET';
+	$route->action = 'edit';
+	$route->page = 'edit_task';
+	$route->controller = 'tasksController';
+	$route->method = 'edit';
+	$routes[] = $route;
 
 
 
