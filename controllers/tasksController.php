@@ -60,7 +60,7 @@ class tasksController extends http\controller
 
 	$record = new todo();
 	$record->userid = $_POST['userid'];
-	$record->created = date('Y-m-d H:m:s');
+	//$record->created = date('Y-m-d');
 	$record->updated = NULL;
 	$record->task = $_POST['task'];
 	$record->complete = "0";

@@ -3,7 +3,8 @@
  * Created by PhpStorm.
  * User: kwilliams
  * Date: 11/27/17
- * Time: 5:32 PM
+ *
+ Time: 5:32 PM
  */
 
 
@@ -184,4 +185,33 @@ public static function display()
 }
 
 
-}
+
+
+
+
+
+public static function logout()
+
+
+{
+   if(key_exists('userID',$_SESSION)){
+   
+   
+             unset($_SESSION['userID']);
+   }else{
+         
+	 echo 'not logged in';
+   }
+ 
+ header('Location: index.php');
+
+
+ }
+
+
+
+
+
+ }
+
+

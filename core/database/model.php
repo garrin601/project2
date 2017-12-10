@@ -47,18 +47,28 @@ abstract class model
 
 
 
+
+
     private function insert()
-    {
+{    
+    
+   {
 
         $modelName = static::$modelName;
-        $tableName = $modelName::getTablename();
+    //    $tableName = $modelName::getTablename();
         $array = get_object_vars($this);
         unset($array['id']);
         $columnString = implode(',', array_flip($array));
         $valueString = ':' . implode(',:', array_flip($array));
-        $sql = 'INSERT INTO ' . $tableName . ' (' . $columnString . ') VALUES (' . $valueString . ')';
-        return $sql;
+       $sql = 'INSERT INTO ' . $tableName . ' (' . $columnString . ') VALUES (' . $valueString . ')';
+      //  return $sql;
     }
+
+
+
+
+
+}
 
     public function validate() {
 
@@ -82,6 +92,9 @@ abstract class model
         }
         $sql .= ' WHERE id=' . $this->id;
         return $sql;
+
+
+
 
     }
 

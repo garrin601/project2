@@ -17,6 +17,6 @@ final class todo extends database\model
         $tableName = 'todos';
         return $tableName;
     }
-}
 
+}
 ?>

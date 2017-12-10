@@ -25,7 +25,15 @@ class htmlTable
             foreach ($record as $key => $value) {
                 if ($key == 'id') {
                     $tableGen .= '<td><a href="index.php?page=' . $referingPage . '&action=show&id=' . $value . '">View</a></td>';
-                } else {
+                } 
+		
+		elseif ($key=='id')
+		{
+		$tableGen .= '<td><a href="index.php?page=tasks$action=show&id=' . $value .' ">View</a></td>';
+		
+		}
+		else 
+		{
                     $tableGen .= '<td>' . $value . '</td>';
                 }
             }

@@ -20,13 +20,33 @@ class homepageController extends http\controller
 //the template is an HTML page with PHP inserted in it.  just put an if/else statement to check for the session and show correct links
 
 
-        $templateData['site_name'] = 'mysite';
+   // $templateData['site_name'] = 'mysite';
 
 //template data contains what will show up in the $data variable in the homepage template
 //the name of the template 'homepage' becomes 'homepage.php' in the pages directory
 
-        self::getTemplate('homepage', $templateData);
-    }
+
+if(
+	key_exists('userID',$_SESSION)) 
+
+{
+        header("Location: index.php?page=accounts&action=display");
+}
+
+else
+
+{
+	$templateData['site_name'] = 'mysite';
+	 self::getTemplate('homepage', $templateData);
+}
+
+
+}
+  
+
+ 
+   //self::getTemplate('homepage', $templateData);
+   
 
     public static function create()
     {

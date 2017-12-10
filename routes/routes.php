@@ -193,7 +193,7 @@ class routes
 	$route->http_method = 'GET';
 	$route->action = 'logout';
 	$route->page = 'accounts';
-	$route->controlle r= 'accountsController';
+	$route->controller= 'accountsController';
 	$route->method = 'logout';
 	$routes[] = $route;
 

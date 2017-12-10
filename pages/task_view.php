@@ -1,5 +1,10 @@
 <!doctype html>
- 
+
+
+
+<? 
+
+echo  ($_REQUEST['id']);
  <html lang="en">
  <head>
   <meta charset="utf-8">
@@ -14,7 +19,14 @@
 <![endif]-->
 </head>
      <body>
+
+
+
+
 <h1><a href="index.php?page=accounts&action=logout">LOG OUT</a></h1>
+
+<h1><a href="index.php?page=create&action=add_task"><button class="edit">Create Tasks Here</button></a></h1>
+
 <?php
 		    //this is how you print something
 		    
@@ -31,7 +43,9 @@ print utility\htmlTable::genarateTableFromMultiArray($data['table'], 'tasks');
 			 
 			 
 }
-			 
+
+
+
  ?>
 			    
 			     

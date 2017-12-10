@@ -30,12 +30,11 @@
 
 
  <section class="container" id="alltasks">
-  <div class="row">
- <div class="col-sm-12">
 
-<h1>My Tasks</h1>
+ 
+<h1>All Current Taskings</h1>
 
-<h2> Tasks are below, please feel free to edit update or change </h2>
+<h2> All Current Tasks are below, but please log in to add and delete </h2>
 
 
 
@@ -46,7 +45,8 @@
 </div>
 <div class="row">
 <div class="col-sm-2">
-<a href="index.php?page=create&action=add_task"><button class="edit">Create Tasks Here</button></a>
+<!-- <a href="index.php?page=create&action=add_task"><button class="edit">Create Tasks Here</button></a>-->
+
 </div>
 
 
