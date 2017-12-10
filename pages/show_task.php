@@ -1,5 +1,13 @@
 <!doctype html>
 
+
+
+<?php include('header.php'); ?>
+
+
+
+
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -13,18 +21,20 @@
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
-</head>
 
-<body>
+<h1><a href="index.php?page=tasks&action=all">Return back to All Tasks</a></h1>
+<p> <?php print utility\htmlTable::generateTableFromOneRecord($data); ?></p>
 
-<?php
-//this is how you print something  $data contains the record that was selected on the table.
+<a href="index.php?page=edit_task&action=edit&id=<?php echo $data->id; ?> "><button class="edit">Edit This Task</button></a><br>
 
-print_r($data);
-?>
-<form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
-    <button type="submit" form="form1" value="delete">Delete</button>
-</form>
+<form action="index.php?page=deleted&action=delete&id=<?php echo $data->id; ?> " method="post"id="form1">
+<button type="submit" form="form1" value="delete"class="delete">Delete This Task</button>
+
+
+
+
+
+
 
 
 

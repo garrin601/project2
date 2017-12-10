@@ -164,7 +164,7 @@ class routes
 	$route = new route();
 	$route->http_method = 'POST';
 	$route->action = 'add_task';
-	$route->page = 'all_tasks';
+	$route->page = 'tasks';
 	$route->controller = 'tasksController';
 	$route->method = 'insert';
 	$routes[] = $route;
