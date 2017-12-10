@@ -147,7 +147,7 @@ class routes
         $routes[] = $route;
 	
 	
-	// Route for task page
+	// Route for create  task page
 
 	 $route = new route();
 	 $route->http_method = 'GET';
@@ -158,6 +158,25 @@ class routes
 	 $routes[] = $route;
 
         return $routes;
+	
+	// Route for inserting a new task on create page
+
+	$route = new route();
+	$route->http_method = 'POST';
+	$route->action = 'add_task';
+	$route->page = 'all_tasks';
+	$route->controller = 'tasksController';
+	$route->method = 'insert';
+	$routes[] = $route;
+
+
+
+
+
+
+
+
+
     }
 
     public static function create($http_method,$action,$page,$controller,$method) {
