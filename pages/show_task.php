@@ -27,7 +27,7 @@
 
 <a href="index.php?page=edit_task&action=edit&id=<?php echo $data->id; ?> "><button class="edit">Edit This To Do</button></a>
 
-<form action="index.php?page=deleted&action=delete&id=<?php echo $data->id; ?> " method="post"id="form1">
+<form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post"id="form1">
 <button type="submit" form="form1" value="delete"class="delete">Delete This Task</button>
 
 
