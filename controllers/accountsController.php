@@ -63,10 +63,18 @@ class accountsController extends http\controller
             $user->password = $user->setPassword($_POST['password']);
             $user->save();
 
-            //you may want to send the person to a
+           if (isset($user->id))
+	   
+	   {
+	        $_SESSION['userID'] = $user->id;
+		 header("Location: index.php?page=accounts&action=display");
+		} 
+		 
+		 
+		 //you may want to send the person to a
             // login page or create a session and log them in
             // and then send them to the task list page and a link to create tasks
-            header("Location: index.php?page=accounts&action=all");
+           
 
         } else {
             //You can make a template for errors called error.php
@@ -77,15 +85,16 @@ class accountsController extends http\controller
 
         }
 
-    }
+   } 
 
-    public static function edit()
+
+
+public static function edit()
     {
-        $record = accounts::findOne($_REQUEST['id']);
-
-        self::getTemplate('edit_account', $record);
-
+            $record = accounts::findOne($_REQUEST['id']);
+	            self::getTemplate('edit_account', $record);
     }
+   
 //this is used to save the update form data
     public static function save() {
         $user = accounts::findOne($_REQUEST['id']);
@@ -127,14 +136,17 @@ class accountsController extends http\controller
 
             if($user->checkPassword($_POST['password']) == TRUE) {
 
-                echo 'login';
+               // echo 'login';
 
-                session_start();
+               // session_start();
                 $_SESSION["userID"] = $user->id;
 
                 //forward the user to the show all todos page
-                print_r($_SESSION);
-            } else {
+           
+	   header("Location: index.php?page=accounts&action=display");
+           
+	   
+	   } else {
                 echo 'password does not match';
             }
 
@@ -144,5 +156,32 @@ class accountsController extends http\controller
 
 
     }
+
+
+
+public static function display()
+
+{
+	if(key_exists('userID',$_SESSION)) 
+	{
+		$userID = $_SESSION['userID'];
+	}
+
+	else 
+	{
+		 echo 'you must be logged in to view tasks';
+	}
+
+	$userID = $_SESSION['userID'];
+	$data['account'] = accounts::findone($userID);
+	$table = NULL;
+	$table = todos::findTasksbyID($userID);
+	if ($table != NULL)
+	$data['table'] =$table;
+	self::getTemplate('task_view', $data);
+
+
+}
+
 
 }
