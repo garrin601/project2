@@ -55,13 +55,13 @@ abstract class model
    {
 
         $modelName = static::$modelName;
-    //    $tableName = $modelName::getTablename();
+       $tableName = $modelName::getTablename();
         $array = get_object_vars($this);
         unset($array['id']);
         $columnString = implode(',', array_flip($array));
         $valueString = ':' . implode(',:', array_flip($array));
        $sql = 'INSERT INTO ' . $tableName . ' (' . $columnString . ') VALUES (' . $valueString . ')';
-      //  return $sql;
+       return $sql;
     }
 
 
