@@ -166,7 +166,7 @@ class routes
 	$route->action = 'add_task';
 	$route->page = 'tasks';
 	$route->controller = 'tasksController';
-	$route->method = 'insert';
+	$route->method = 'store';
 	$routes[] = $route;
 
 	// Adding a route for editing tasks from page=tasks&action=show

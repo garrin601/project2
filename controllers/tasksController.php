@@ -94,7 +94,7 @@ header("Location: index.php?page=tasks&action=all");
     public static function store()
     {
 
-
+/*
        $record = new todo();
        $record->id = $_REQUEST['id'];
        $record->updated = date('Y-m-d H:m:s');
@@ -103,6 +103,44 @@ header("Location: index.php?page=tasks&action=all");
        $record->save();
 
 header("Location: index.php?page=tasks&action=show=".$_REQUEST['id']);
+*/
+
+
+
+  $id=$_REQUEST['id'];
+  if($id==null)
+  
+  {
+       $record=new \todo;
+       $record->owneremail=$_POST['owneremail'];
+       $record->ownerid=$_POST['ownerid'];
+       $record->createddate=$_POST['createddate'];
+       $record->duedate=$_POST['duedate'];
+       $record->message=$_POST['message'];
+       $record->isdone=$_POST['isdone'];
+       $record->save(); 
+  }
+
+
+else
+{
+  $record =  todos::findOne($_REQUEST['id']);
+  $record->owneremail=$_POST['owneremail'];
+  $record->ownerid=$_POST['ownerid'];
+  $record->createddate=$_POST['createddate'];
+  $record->duedate=$_POST['duedate'];
+  $record->message=$_POST['message'];
+  $record->isdone=$_POST['isdone'];
+  $record->save();																           }
+																		           header('Location:index.php?page=accounts&action=display');
+
+
+
+
+
+
+
+
 
     }
 
