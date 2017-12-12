@@ -139,7 +139,7 @@ public static function edit()
 
                // echo 'login';
 
-               // session_start();
+                session_start();
                 $_SESSION["userID"] = $user->id;
 
                 //forward the user to the show all todos page
@@ -163,8 +163,10 @@ public static function edit()
 public static function display()
 
 {
+        session_start();
 	if(key_exists('userID',$_SESSION)) 
 	{
+		
 		$userID = $_SESSION['userID'];
 	}
 

@@ -110,10 +110,13 @@ header("Location: index.php?page=tasks&action=show=".$_REQUEST['id']);
   $id=$_REQUEST['id'];
   if($id==null)
   
-  {
+
+{
+       session_start();
+       $ownerid = $_SESSION['userID'];
        $record=new \todo;
        $record->owneremail=$_POST['owneremail'];
-       $record->ownerid=$_POST['ownerid'];
+       $record->ownerid= $ownerid;
        $record->createddate=$_POST['createddate'];
        $record->duedate=$_POST['duedate'];
        $record->message=$_POST['message'];
@@ -145,14 +148,21 @@ else
     }
 
     public static function save() {
-        session_start();
-        $task = new todo();
+          
+	  
+	  $record = todos::findOne($_REQUEST['id']);
+	  $record->owneremail=$_POST['owneremail'];
+	  $record->ownerid=$_POST['ownerid'];
+	  $record->createddate=$_POST['createddate'];
+	  $record->duedate=$_POST['duedate'];
+	  $record->message=$_POST['message'];
+ 	  $record->isdone=$_POST['isdone'];
+	  $record->save();
 
-        $task->body = $_POST['body'];
-        $task->ownerid = $_SESSION['userID'];
-        $task->save();
+header('Location:index.php?page=accounts&action=all');
+}
 
-    }
+    
 
     //this is the delete function.  You actually return the edit form and then there should be 2 forms on that.
     //One form is the todo and the other is just for the delete button

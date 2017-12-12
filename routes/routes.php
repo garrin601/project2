@@ -198,7 +198,13 @@ class routes
 	$routes[] = $route;
 
 
-
+	$route = new route();
+	$route->http_method = 'POST';
+	$route->action = 'save_tasks';
+	$route->page = 'task';
+	$route->controller = 'tasksController';
+	$route->method = 'save';
+	$routes[] = $route;
 
 
 
