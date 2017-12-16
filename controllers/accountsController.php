@@ -163,7 +163,7 @@ public static function edit()
 public static function display()
 
 {
-        session_start();
+
 	if(key_exists('userID',$_SESSION)) 
 	{
 		

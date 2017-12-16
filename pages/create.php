@@ -14,7 +14,6 @@
 <form action="index.php?page=tasks&action=add_task" method="post" id="addTaskForm">
 
 Owner Email:<input type="text" name="owneremail" value=""><br>
-Owner ID:<input type="text" name="ownerid" value="" ><br>
 Created Date:<input type="text" name="createddate" value= " " ><br>
 Due Date:<input type="text" name="duedate" value=""><br>
 Message:<input type="text" name="message" value=""><br>
