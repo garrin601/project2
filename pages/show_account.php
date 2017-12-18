@@ -51,7 +51,7 @@ i<form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" 
 
 
 
-
+<?php include ('footer.php') ?>
 
 <script src="js/scripts.js"></script>
 </body>

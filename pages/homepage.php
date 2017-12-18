@@ -18,7 +18,7 @@
 <body>
 
  </h1>
-<h1 class="header">Welcome, please dont break it</h1>
+<h1 class="header">Welcome to my final project</h1>
 <h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>
 <h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>
 
@@ -51,3 +51,6 @@
 <script src="js/scripts.js"></script>
 </body>
 </html>
+
+<br><br><br><br>
+<?php include ('footer.php') ?>

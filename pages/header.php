@@ -12,8 +12,8 @@
 
 
   <li><a href="index.php">Return Home</a></li>
-  <li><a href= "index.php?page=accounts&action=all">Show all of your Current Accounts</a></li>
-  <li><a href="index.php?page=tasks&action=all">Show all of your Current Tasks</a></li>
+  <li><a href= "index.php?page=accounts&action=all">Show all Current Accounts</a></li>
+  <li><a href="index.php?page=tasks&action=all">Show all Current Tasks</a></li>
 
 
 

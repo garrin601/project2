@@ -29,32 +29,16 @@
 
 
 
- <section class="container" id="alltasks">
+
 
  
-<h1>All Current Taskings</h1>
-
-<h2> All Current Tasks are below, but please log in to add and delete </h2>
-
-
+<h3>Below are all the current tasks, please log in to add a to-do item, Thank you.</h3>
 
 <p> <?php print utility\htmlTable::genarateTableFromMultiArray($data); ?></p>
 
 
-</div>	
-</div>
-<div class="row">
-<div class="col-sm-2">
-<!-- <a href="index.php?page=create&action=add_task"><button class="edit">Create Tasks Here</button></a>-->
 
-</div>
-
-
-<div class="col-sm-10"></div>
-</div>
-</section>
-
-
+<?php include ('footer.php') ?>
 
 
 <script src="js/scripts.js"></script>
